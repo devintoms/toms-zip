@@ -90,7 +90,7 @@
 	aria-label="Main navigation"
 	class="sticky top-0 z-50 border-b border-gray-700 bg-gray-400 shadow-sm"
 >
-	<div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+	<div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-1 sm:px-6 lg:px-8">
 		<div class="flex items-center gap-2">
 			<svg
 				aria-hidden="true"

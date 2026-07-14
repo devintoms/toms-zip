@@ -30,11 +30,12 @@
 	width={innerWidth.current}
 	height={ditherHeight}
 	colorBack="#000000"
-	colorFront="#aa7ca9"
+	// colorFront= "#aa7ca9"
+	colorFront="#523B52"
 	shape="warp"
 	type="8x8"
 	size={1.5}
-	speed={0.25}
+	speed={0.1}
 	scale={1.25}
 	rotation={0}
 	offsetX={0}

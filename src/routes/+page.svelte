@@ -6,8 +6,16 @@
         <div class="align-middle bg-black">
             <p class="text-m text-gray-400 text-center font-mono py-2">I'm a Full Stack Software Engineer based in Richmond, VA. I like using computers to create elegant, creative, and capable software.</p>
         </div>
-        <div class="text-gray-400">
-            <a href="https://www.linkedin.com/in/devintoms/">LinkedIn</a>
-        </div>
+        <ul class="text-gray-400">
+            <li>
+                <a href="https://www.linkedin.com/in/devintoms/">LinkedIn</a>
+            </li>
+            <li>
+                <a href="https://github.com/devintoms">GitHub</a>
+            </li>
+            <li>
+                <a href="https://www.lazysundays.net/authors/devin-toms">the lazy sundays blog</a>
+            </li>
+        </ul>
     </div>
 </div>

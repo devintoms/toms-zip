@@ -6,7 +6,17 @@ declare global {
 		// interface Locals {}
 		// interface PageData {}
 		// interface PageState {}
-		// interface Platform {}
+
+		// Support for env variables in a Cloudflare Worker deployment
+		interface Platform {
+			env: {
+				COUNTER: DurableObjectNamespace;
+			};
+			context: {
+				waitUntil(promise: Promise<any>): void;
+			};
+			caches: CacheStorage & { default: Cache }
+		}
 	}
 }
 

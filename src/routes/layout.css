@@ -2,6 +2,6 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-mint-500: oklch(0.72 0.11 178);
-  --font-antonio: "Antonio", sans-serif;
+	--color-mint-500: oklch(0.72 0.11 178);
+	--font-antonio: 'Antonio', sans-serif;
 }

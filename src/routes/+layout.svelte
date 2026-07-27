@@ -41,7 +41,7 @@
 	offsetX={0}
 	offsetY={0}
 	fit="cover"
-	class="fixed inset-0 -z-50 pointer-events-none"
+	class="pointer-events-none fixed inset-0 -z-50"
 />
 
 <!-- page content -->

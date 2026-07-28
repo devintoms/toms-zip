@@ -1,19 +1,31 @@
 <script lang="ts">
-	let selectedOption: string = $state('Home');
+	import { page } from '$app/state';
+	import { afterNavigate } from '$app/navigation';
+	import { goto } from '$app/navigation';
+
 	let isOpen: boolean = $state(false);
 
-	const navOptions = ['Home', 'About', 'Portfolio'] as const;
+	const navOptions = [
+		{ label: 'Home', href: '/' },
+		{ label: 'About', href: '/about' },
+		{ label: 'Portfolio', href: '/portfolio' }
+	] as const;
+
+	const selectedOption = $derived(
+		navOptions.find((o) => o.href === page.url.pathname)?.label ?? 'Home'
+	);
+
+	$effect(() => {
+		afterNavigate(() => {
+			isOpen = false;
+		});
+	});
 
 	let menuId = 'navbar-menu';
 	let buttonId = 'navbar-menu-button';
 
 	function toggleMenu() {
 		isOpen = !isOpen;
-	}
-
-	function selectOption(option: string) {
-		selectedOption = option;
-		isOpen = false;
 	}
 
 	function handleMenuKeydown(event: KeyboardEvent) {
@@ -102,7 +114,7 @@
 			>
 				<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" />
 			</svg>
-			<span class="font-mono text-lg font-bold tracking-tight text-gray-900">toms.zip</span>
+			<a href="/" class="font-mono text-lg font-bold tracking-tight text-gray-900">toms.zip</a>
 		</div>
 
 		<div class="flex items-center gap-3 sm:gap-4">
@@ -148,25 +160,25 @@
 							{#each navOptions as option (option)}
 								<li>
 									<a
-										href="#top"
+										href={option.href}
 										role="menuitem"
 										tabindex="-1"
-										onclick={(e) => {
-											e.preventDefault();
-											selectOption(option);
+										onclick={() => {
+											isOpen = false;
 										}}
 										onkeydown={(e) => {
 											if (e.key === 'Enter' || e.key === ' ') {
 												e.preventDefault();
-												selectOption(option);
+												goto(option.href);
+												isOpen = false;
 											}
 										}}
 										class="block min-h-[44px] px-4 py-2 font-mono text-sm text-gray-700 transition-colors hover:bg-gray-100 focus-visible:bg-gray-100 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none focus-visible:ring-inset {selectedOption ===
-										option
+										option.label
 											? 'font-semibold text-gray-900'
 											: ''}"
 									>
-										{option}
+										{option.label}
 									</a>
 								</li>
 							{/each}

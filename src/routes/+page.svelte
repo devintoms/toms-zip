@@ -13,10 +13,24 @@
 		</div>
 		<ul class="text-gray-400">
 			<li>
-				<a href="https://www.linkedin.com/in/devintoms/">LinkedIn</a>
+				<a href="https://www.linkedin.com/in/devintoms/" class="flex items-center gap-2">
+					<img
+						src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg"
+						alt="LinkedIn logo"
+						class="h-[1em] w-[1em] brightness-0 invert"
+					/>
+					LinkedIn
+				</a>
 			</li>
 			<li>
-				<a href="https://github.com/devintoms">GitHub</a>
+				<a href="https://github.com/devintoms" class="flex items-center gap-2">
+					<img
+						src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"
+						alt="GitHub logo"
+						class="h-[1em] w-[1em] brightness-0 invert"
+					/>
+					GitHub
+				</a>
 			</li>
 			<li>
 				<a href="https://www.lazysundays.net/authors/devin-toms">the lazy sundays blog</a>
